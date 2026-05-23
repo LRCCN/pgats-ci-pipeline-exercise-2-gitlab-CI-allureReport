@@ -1,0 +1,39 @@
+# CI Level 01 - Manual Execution via Click
+
+# pipeline name
+name: 'Manual Execution Workflow'
+
+# trigger on workflow_dispatch (manual trigger)
+on:
+  workflow_dispatch:
+
+# jobs to run
+jobs:
+  # job name
+  e2e-tests:
+    # runs on ubuntu-latest
+    runs-on: ubuntu-latest
+
+    # steps to execute
+    steps:
+      # step 1: clone repository
+      - uses: actions/checkout@v4
+
+      # step 2: set up Node.js
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      # step 3: install dependencies
+      - name: yarn instalation
+        run: npm install -g yarn
+        run: yarn
+
+      # step 4: playwright browser installation
+      - name: Playwright browser installation
+        run: yarn playwright install
+
+      # step 5: run tests
+      - name: Run tests
+        run: yarn test:e2e
+
