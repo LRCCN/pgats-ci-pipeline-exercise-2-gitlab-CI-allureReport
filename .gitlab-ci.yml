@@ -4,6 +4,30 @@ stages:
 variables:
   CI: 'true'
 
+unit_tests:
+  stage: test
+  image: node:20
+  script:
+    - node --version
+    - npm --version
+    - npm install -g yarn
+    - yarn
+    - yarn test
+
+mutation_tests:
+  stage: test
+  image: node:20
+  script:
+    - node --version
+    - npm --version
+    - npm install -g yarn
+    - yarn
+    - yarn test:mutation
+  artifacts:
+    when: always
+    paths:
+      - reports/mutation/
+
 e2e_tests:
   stage: test
   image: mcr.microsoft.com/playwright:v1.47.2-jammy
