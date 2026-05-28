@@ -58,6 +58,7 @@ allure_report:
     - unit_tests
     - e2e_tests
   script:
+    - apt-get update -qq && apt-get install -y -qq default-jre
     - npm ci
     - npx allure generate allure-results --clean -o allure-report
   artifacts:
