@@ -101,7 +101,7 @@ module.exports = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  reporters: ['default', ['allure-jest', { resultsDir: 'allure-results' }]],
+  // reporters: undefined,
 
   // Automatically reset mock state before every test
   // resetMocks: false,
@@ -139,7 +139,10 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: 'jsdom',
+  testEnvironment: 'allure-jest/jsdom',
+  testEnvironmentOptions: {
+    resultsDir: 'allure-results',
+  },
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
