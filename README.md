@@ -8,33 +8,32 @@
 1. Instale o [git](https://git-scm.com)
 2. Instale o [nodejs](https://nodejs.org/)
 3. Instale o Yarn - `npm install -g yarn`
-4. Faça um _Fork_ do projeto
-5. Clone o repositório para sua máquina (seu fork)
-6. Instale as dependências
+4. Clone este repositório para sua máquina
+5. Instale as dependências
    ```shell
-   cd pgats-ci
+   cd pgats-ci-pipeline-exercise-1-gitlab-CI
    yarn
    ```
-7. Execute os testes de unidade - isso vai gerar um relatório
+6. Execute os testes de unidade
    ```shell
    yarn run test
    ```
-8. Abra o relatório de cobertura de código em `reports/coverage/lcov-report`
-9. Execute os testes de mutação com o Stryker
+7. Execute os testes de mutação com o Stryker
    ```shell
    yarn run test:mutation
    ```
-10. Abra o relatório de mutação em `reports/mutation`
-11. Instale os navegadores do Playwright
+8. Instale os navegadores do Playwright
     ```shell
     yarn playwright install
     ```
-12. Execute os testes end-to-end com o Playwright
+9. Execute os testes end-to-end com o Playwright
     ```shell
     yarn run e2e
     ```
-13. Execute a aplicação com `yarn start`
-14. Acesse a aplicação publicada [neste link](https://pgats-ci-example.netlify.app)
+10. Execute a aplicação localmente
+    ```shell
+    yarn start
+    ```
 
 ---
 
@@ -46,12 +45,23 @@ O código-fonte deste projeto é hospedado no **GitHub**, porém a execução do
 1. O desenvolvedor faz push no repositório do GitHub
 2. Um webhook notifica o GitLab
 3. O GitLab sincroniza o mirror do repositório e executa o pipeline definido em `.gitlab-ci.yml`
-4. Os resultados do pipeline (testes, cobertura, mutação, e2e) ficam disponíveis no GitLab
+4. Os resultados dos jobs ficam disponíveis no GitLab
 
 Essa abordagem permite manter o repositório no GitHub e aproveitar os runners e recursos de pipeline do GitLab.
 
 ---
 
-💜⚡️
+## Pipeline atual (.gitlab-ci.yml)
 
-# pgats-ci
+O pipeline possui o estágio `test` com os seguintes jobs:
+
+1. `unit_tests`
+   - Executa `yarn test`
+2. `mutation_tests`
+   - Executa `yarn test:mutation`
+   - Publica artefatos em `reports/mutation/`
+3. `e2e_tests`
+   - Executa `yarn playwright install` e `yarn e2e`
+   - Publica artefatos em `playwright-report/`, `test-results/` e `results.xml`
+
+Observação: localmente você pode usar `npm test` ou `yarn test`; ambos executam a mesma suíte de testes unitários definida no `package.json`.
