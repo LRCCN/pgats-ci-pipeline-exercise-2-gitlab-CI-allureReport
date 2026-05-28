@@ -801,26 +801,6 @@
   resolved "https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@stryker-mutator/api@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.npmjs.org/@stryker-mutator/api/-/api-8.5.0.tgz"
-  integrity sha512-dhz6BAbNr6LW96UjJFyxVnGOvJqo+7GdIBJl3Cckg3/Bakn0jL61xZ0ca9pcrbVHivy9vlzMs+dCv2pr9QV9rg==
-  dependencies:
-    mutation-testing-metrics "3.2.0"
-    mutation-testing-report-schema "3.1.1"
-    tslib "~2.6.3"
-    typed-inject "~4.0.0"
-
-"@stryker-mutator/api@8.6.0":
-  version "8.6.0"
-  resolved "https://registry.npmjs.org/@stryker-mutator/api/-/api-8.6.0.tgz"
-  integrity sha512-iEZYV40zpSJBDXombffbLuEVr0j/rJseEgmDcfGJQfSc0yxuEg7+MEFRweUQCaJICXu+2A10o9TnCWTyqK5OKg==
-  dependencies:
-    mutation-testing-metrics "3.3.0"
-    mutation-testing-report-schema "3.3.0"
-    tslib "~2.7.0"
-    typed-inject "~4.0.0"
-
 "@stryker-mutator/api@8.7.1":
   version "8.7.1"
   resolved "https://registry.npmjs.org/@stryker-mutator/api/-/api-8.7.1.tgz"
@@ -831,7 +811,7 @@
     tslib "~2.7.0"
     typed-inject "~4.0.0"
 
-"@stryker-mutator/core@^8.5.0", "@stryker-mutator/core@~8.5.0", "@stryker-mutator/core@~8.6.0":
+"@stryker-mutator/core@^8.5.0", "@stryker-mutator/core@~8.7.0":
   version "8.7.1"
   resolved "https://registry.npmjs.org/@stryker-mutator/core/-/core-8.7.1.tgz"
   integrity sha512-r2AwhHWkHq6yEe5U8mAzPSWewULbv9YMabLHRzLjZnjj+Ipxtg+Zo22rrUc2Zl7mnYvb9w34bdlEzGz6MKgX2g==
@@ -879,36 +859,26 @@
     semver "~7.6.3"
     weapon-regex "~1.3.2"
 
-"@stryker-mutator/jest-runner@^8.5.0":
-  version "8.5.0"
-  resolved "https://registry.npmjs.org/@stryker-mutator/jest-runner/-/jest-runner-8.5.0.tgz"
-  integrity sha512-6UmieXl/6NJ6YtQHWY97O9jdtcQ2OHw4JLE0VMgPPSrrSyXHhU4V1CPYK2gHGPdu87YRGYg3A4BpIDny00fUlg==
+"@stryker-mutator/jest-runner@^8.7.0":
+  version "8.7.1"
+  resolved "https://registry.npmjs.org/@stryker-mutator/jest-runner/-/jest-runner-8.7.1.tgz"
+  integrity sha512-507jgu9E0yNDwMN56p4J+iFI77+rPDLDV91qYGbBI6fvy5c7rBQ63l64FtAFMTG75f4gCZ6C/Pq3nXTQx6PMjA==
   dependencies:
-    "@stryker-mutator/api" "8.5.0"
-    "@stryker-mutator/util" "8.5.0"
-    semver "~7.6.3"
-    tslib "~2.6.3"
-
-"@stryker-mutator/karma-runner@^8.6.0":
-  version "8.6.0"
-  resolved "https://registry.npmjs.org/@stryker-mutator/karma-runner/-/karma-runner-8.6.0.tgz"
-  integrity sha512-DhR30AzM42eAaMelggBOSKDxxIdgKouQZ5uptXYD7D7RuTa5Q5XaHiKzLJeAAu7W+XcmkK4LHqplK5NyRbShVg==
-  dependencies:
-    "@stryker-mutator/api" "8.6.0"
-    "@stryker-mutator/util" "8.6.0"
-    decamelize "~6.0.0"
+    "@stryker-mutator/api" "8.7.1"
+    "@stryker-mutator/util" "8.7.1"
     semver "~7.6.3"
     tslib "~2.7.0"
 
-"@stryker-mutator/util@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.npmjs.org/@stryker-mutator/util/-/util-8.5.0.tgz"
-  integrity sha512-T1ElpGUDqESKcwuRnfEuroE7N2pEMLTqieWRLIJZsP2ubEfnoHp4aGVL6IjPRdiZr4jetZOLfjlTzddrqrbsvg==
-
-"@stryker-mutator/util@8.6.0":
-  version "8.6.0"
-  resolved "https://registry.npmjs.org/@stryker-mutator/util/-/util-8.6.0.tgz"
-  integrity sha512-SruyNDhioBTR7Eq1sSxr9YYBLGHF5s999W63xcOJ+4RdRwyLwNUX1H8DiYnjQC5vs5X/Ap/UsmGwyVnv1ObSnQ==
+"@stryker-mutator/karma-runner@^8.7.0":
+  version "8.7.1"
+  resolved "https://registry.npmjs.org/@stryker-mutator/karma-runner/-/karma-runner-8.7.1.tgz"
+  integrity sha512-6+RZyjZMAhRB0lCVogVTt9Vqil/6CE1PD/yh6uYp4QgThJMNjr6OXApCPBTtFJ5RbR6/rhLbbwyhPfpUgqDUpw==
+  dependencies:
+    "@stryker-mutator/api" "8.7.1"
+    "@stryker-mutator/util" "8.7.1"
+    decamelize "~6.0.0"
+    semver "~7.6.3"
+    tslib "~2.7.0"
 
 "@stryker-mutator/util@8.7.1":
   version "8.7.1"
@@ -3015,24 +2985,12 @@ mutation-testing-elements@3.4.0:
   resolved "https://registry.npmjs.org/mutation-testing-elements/-/mutation-testing-elements-3.4.0.tgz"
   integrity sha512-zFJtGlobq+Fyq95JoJj0iqrmwLSLQyIJuDATLwFMDSJCxpGN8kHCA6S4LoLJnkSL6bg4Aqultp8OBSMxGbW3EA==
 
-mutation-testing-metrics@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/mutation-testing-metrics/-/mutation-testing-metrics-3.2.0.tgz"
-  integrity sha512-PheogUIwu8g4jN6uF9PM5sskBWcZlTSYnANxxYBFvZi3n+2lcd3hLOj+JdHqNEAY1uTsgkmR9Vkh4RtVp8QwSw==
-  dependencies:
-    mutation-testing-report-schema "3.1.1"
-
 mutation-testing-metrics@3.3.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/mutation-testing-metrics/-/mutation-testing-metrics-3.3.0.tgz"
   integrity sha512-vZEJ84SpK3Rwyk7k28SORS5o6ZDtehwifLPH6fQULrozJqlz2Nj8vi52+CjA+aMZCyyKB+9eYUh1HtiWVo4o/A==
   dependencies:
     mutation-testing-report-schema "3.3.0"
-
-mutation-testing-report-schema@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/mutation-testing-report-schema/-/mutation-testing-report-schema-3.1.1.tgz"
-  integrity sha512-lWIbgUEnMEdsY2yymC7SZRBO+6dbZa5tY/Bmw+xjXYPdBxTVlnd2mjKRPZ6FUxgHJ9vMQmQnktMNAKCWZp1H0A==
 
 mutation-testing-report-schema@3.3.0:
   version "3.3.0"
@@ -3793,12 +3751,7 @@ tree-kill@~1.2.2:
   resolved "https://registry.npmjs.org/tree-kill/-/tree-kill-1.2.2.tgz"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-tslib@^2.1.0, tslib@^2.6.2, tslib@~2.6.3:
-  version "2.6.3"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.3.tgz"
-  integrity sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==
-
-tslib@~2.7.0, tslib@2.7.0:
+tslib@^2.1.0, tslib@^2.6.2, tslib@~2.7.0, tslib@2.7.0:
   version "2.7.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.7.0.tgz"
   integrity sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==
