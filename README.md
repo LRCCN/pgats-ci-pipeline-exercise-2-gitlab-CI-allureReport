@@ -38,6 +38,20 @@
 
 ---
 
+## Estratégia de CI/CD
+
+O código-fonte deste projeto é hospedado no **GitHub**, porém a execução do pipeline de CI é realizada pelo **GitLab CI/CD** por meio do recurso _CI/CD for external repositories_.
+
+**Fluxo:**
+1. O desenvolvedor faz push no repositório do GitHub
+2. Um webhook notifica o GitLab
+3. O GitLab sincroniza o mirror do repositório e executa o pipeline definido em `.gitlab-ci.yml`
+4. Os resultados do pipeline (testes, cobertura, mutação, e2e) ficam disponíveis no GitLab
+
+Essa abordagem permite manter o repositório no GitHub e aproveitar os runners e recursos de pipeline do GitLab.
+
+---
+
 💜⚡️
 
 # pgats-ci
