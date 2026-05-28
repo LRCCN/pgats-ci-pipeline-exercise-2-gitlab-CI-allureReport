@@ -10,9 +10,8 @@ unit_tests:
   script:
     - node --version
     - npm --version
-    - npm install -g yarn
-    - yarn
-    - yarn test
+    - npm ci
+    - npm test
 
 mutation_tests:
   stage: test
@@ -20,9 +19,8 @@ mutation_tests:
   script:
     - node --version
     - npm --version
-    - npm install -g yarn
-    - yarn
-    - yarn test:mutation
+    - npm ci
+    - npm run test:mutation
   artifacts:
     when: always
     paths:
@@ -34,10 +32,9 @@ e2e_tests:
   script:
     - node --version
     - npm --version
-    - npm install -g yarn
-    - yarn
-    - yarn playwright install
-    - yarn e2e
+    - npm ci
+    - npx playwright install
+    - npm run e2e
   artifacts:
     when: always
     paths:
